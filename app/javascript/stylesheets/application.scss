@@ -1,2 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+
+
+.user_edit {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+
+
+.fa-user-cog{
+  color: #808080;
+}
+
+.shadow-sm {
+  font-size: 0.8rem;
+}
+
+.new_user {
+  margin-left: 300px;
+}

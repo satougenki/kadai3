@@ -1,15 +1,17 @@
 <p>users index</p>
+<div class="container">
+<div class="row">
 
+ <div class="col-lg-4">
+   <%= render 'books/new', book: @book, user: @user %>
+ </div>
 
-<%= render 'books/new', book: @book, user: @user %>
+<div class="col-lg-8">
+<table class="table">
 
-<header>
   <h1>Users</h1>
-</header>
 
-<table>
   <tr>
-   
     <th>image</th>
     <th>name</th>
     <th></th>
@@ -22,4 +24,7 @@
    <td><%= link_to "Show", user_path(user.id) %></td>
  </tr>
  <% end %>
-</table> 
+</table>
+　</div>
+  </div>
+</div>

@@ -1,10 +1,22 @@
-<h2>プロフィール編集</h2>
-<%= form_with model: @user do |f| %>
-  <label for="inputName">Name</label>
-  <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"名前"%>
-  <label for="inputImage">ProfileImage</label>
-  <%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %>
-  <label for="inputintroduction">introduction</label>
-  <%= f.text_field :introduction, autofocus: true, id:"inputIntroduction", placeholder:"introduction"%>
-  <%= f.submit "変更を保存" %>
+<div class="userinfo">
+<h2>User info</h2>
+
+<% if @user.errors.any? %>
+  <%= @user.errors.count %> errora prohibited this book from being saved:
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
 <% end %>
+
+<%= form_with model: @user do |f| %>
+  <label for="inputName">Name</label><br>
+  <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"名前"%><br>
+  <label for="inputImage">Image</label><br>
+  <%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %><br>
+  <label for="inputintroduction">introduction</label><br>
+  <%= f.text_field :introduction, autofocus: true, id:"inputIntroduction", placeholder:"introduction"%><br>
+  <%= f.submit "Update User", class: "btn-secondary m-2" %>
+<% end %>
+</div>

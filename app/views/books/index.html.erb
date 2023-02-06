@@ -1,5 +1,6 @@
 
 <p>bookindex</p>
+
 <% if @book.errors.any? %>
   <%= @book.errors.count %> errora prohibited this book from being saved:
   <ul>
@@ -8,13 +9,18 @@
     <% end %>
   </ul>
 <% end %>
-<%= render 'new', user: @user, book: @book %>
 
-<header>
-  <h1>Books</h1>
-</header>
+<div class="container">
+<div class="row">
 
-<table>
+<div class="col-lg-4">
+ <%= render 'new', user: @user, book: @book %>
+</div>
+
+
+<div class="col-lg-8">
+<table class="table">
+   <h1>Books</h1>
   <tr>
     <th></th>
     <th>Title</th>
@@ -30,4 +36,6 @@
  </tr>
  <% end %>
 </table>
-
+　　</div>
+  </div>
+</div>

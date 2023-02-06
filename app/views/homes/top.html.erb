@@ -1,4 +1,20 @@
-<h1>welcometo Books!!</h1>
-<h4>In Bookers,</h4>
+
+<div  class="comtainer text-center">
+<h1>welcometo <i class="fas fa-book"></i>
+<strong>Bookers!</strong></h1>
+<h4>In <i class="fas fa-book"></i><strong>Bookers,</strong></h4>
 <p>you can share and exchange your opinions , inpressions , and emotions<br>
 about various books!</p>
+
+ <button type="button" class="btn btn-info m-3" style="width:400px">
+   <%= link_to new_user_session_path, class: "text-light" do %>
+   Log in
+    <% end %>
+  </button>
+  <br>
+ <button type="button" class="btn btn-success" style="width:400px">
+   <%= link_to new_user_registration_path, class: "text-light" do %>
+   Sign up
+    <% end %>
+ </button>
+ </div>

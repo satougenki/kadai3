@@ -1,18 +1,21 @@
 <p>user show</p>
+<div class="container">
+<div class="row">
 
-<%= render 'books/new', book: @book, user: @user %>
+ <div class="col-lg-4">
+  <%= render 'books/new', book: @book, user: @user %>
+ </div>
 
-<header>
+<div class="col-lg-8">
+<table class="table">
+    
   <h1>Books</h1>
-</header>
 
-<table>
   <tr>
     <th></th>
     <th>Title</th>
     <th>Opinion</th>
   </tr>
-
 
  <% @books.each do |book| %>
  <tr>
@@ -22,3 +25,6 @@
  </tr>
  <% end %>
 </table>
+　</div>
+  </div>
+</div>
