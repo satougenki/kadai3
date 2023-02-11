@@ -7,7 +7,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track':'reload'%>
   </head>
 
  <body class="d-flex flex-column vh-100">
@@ -32,7 +32,7 @@
 
             <li class="nav-item ml-2">
               <%= link_to users_path, class: "text-light" do %>
-               <i class="fas fa-user"></i>
+               <i class="fas fa-users"></i>
                Users
               <% end %>
             </li>
@@ -76,7 +76,7 @@
 
             <li class="nav-item ml-2">
               <%= link_to new_user_session_path, class: "text-light" do %>
-               <i class= "fas fa-sign-out-alt"></i>
+            <i class="fas fa-sign-in-alt"></i>
                Log in
               <% end %>
             </li>
@@ -89,7 +89,7 @@
       </nav>
     </header>
     <main class="mb-auto m-300">
-    <%= flash[:notice] %>
+      <%= flash[:notice] %>
     <%= yield %>
     </main>
     <footer class="footer">

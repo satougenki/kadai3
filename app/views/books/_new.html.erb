@@ -16,18 +16,19 @@
     <th><%= user.introduction %></th>
  </tr>
    </table>
+<div class="row">
  <button type="button" class="btn btn-outline-secondary btn-block">
     <%= link_to  edit_user_path(user.id) do %>
      <i class="fas fa-user-cog"></i>
     <% end %>
   </button>
-
+</div>
 
 
 
 
 <div>
-<h1>New book</h1>
+<h1 class="mt-3">New book</h1>
   <%= form_with model: book do |f| %>
 
     <h4>Title</h4>
